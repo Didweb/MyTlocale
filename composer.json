@@ -1,0 +1,14 @@
+{
+	"name": "didweb/MyTLocal",
+	"description": "MyT Framework - Sistema internalizacion",
+	"license": "GPLv3",
+	"authors": [
+		{
+			"name": "Eduard Pinuaga",
+			"email": "info@did-web.com"
+		}
+	],
+	"require": {
+		"phpunit/phpunit": "4.1.*"
+	}
+}
