@@ -26,10 +26,26 @@ class myLocale
 	 return $this->lang;	
 	}	
 	
-	public function setLang($soportados = array('es','en'))
+	public function setLang()
 	{
 		
 	}
+	
+	
+	public function getSoportados()
+	{
+	 return $this->soportados;	
+	}	
+	
+	
+	public function setSoportados($soportados = array('es','en'))
+	{
+		$this->soportados = $soportados;
+		return $this;
+		
+	}
+	
+
 	
 
 }
