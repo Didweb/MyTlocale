@@ -23,9 +23,9 @@ class myLocale
 	public 	$IdiomaEntrada;
 	
 
-	public function __construct()
+	public function __construct($soportados = array('es','en','ca'))
 	{
-		$this->setSoportados();	
+		$this->setSoportados($soportados);	
 		$this->getSoportados();
 	}
 	
