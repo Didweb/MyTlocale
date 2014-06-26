@@ -25,6 +25,9 @@ class myLocale
 
 	public function __construct($soportados = array('es','en','ca'))
 	{
+		if(!is_array($soportados)) {
+			$soportados = explode(',',$soportados);
+			}
 		$this->setSoportados($soportados);	
 		$this->getSoportados();
 	}
