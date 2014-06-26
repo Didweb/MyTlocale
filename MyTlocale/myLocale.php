@@ -26,9 +26,9 @@ class myLocale
 	 return $this->lang;	
 	}	
 	
-	public function setLang()
+	public function setLang($lang = 'es')
 	{
-		
+	return $this->lang = $lang ;	
 	}
 	
 	
