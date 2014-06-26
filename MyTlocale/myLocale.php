@@ -36,22 +36,22 @@ class myLocale
 
 
 
-	public function setLang()
+	public function setLang($getlang = null )
 	{	
-		if(!isset($_SESSION['lang']) && !isset($_GET['lang'])){
+		if(!isset($_SESSION['lang']) && $getlang == null){
 			
 			$this->setIdiomaEntrada();
 			$lang = $this->buscalang();
 			$_SESSION['lang'] = $lang;
 			return $this->lang = $lang;
 				
-			} elseif(isset($_SESSION['lang']) && !isset($_GET['lang'])) {
+			} elseif(isset($_SESSION['lang']) && $getlang == null) {
 			
 				return $this->lang = $_SESSION['lang'];
 			
-			} elseif(isset($_GET['lang'])) {
+			} elseif($getlang != null) {
 			
-				$lang = $this->checklang($_GET['lang']);
+				$lang = $this->checklang($getlang);
 				$_SESSION['lang'] = $lang;
 				return $this->lang = $lang;
 			}
