@@ -1,7 +1,7 @@
 {
 	"name": "didweb/myt-local",
 	"description": "MyT Framework - Sistema internalizacion",
-	"keywords": ["resize", "redimensionar imagen", "thumbnail"],
+	"keywords": ["locale", "lang", "internalizacion","multilingue"],
 	"homepage": "https://github.com/Didweb",
 	"time": "2014-6-26",
 	"type": "MyT-framework",
