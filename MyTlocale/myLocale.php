@@ -18,17 +18,85 @@
     * */
 class myLocale
 {
-	private $lang;
+	public 	$lang;
 	private $soportados;
+	public 	$IdiomaEntrada;
+	
+
+	public function __construct()
+	{
+		$this->setSoportados();	
+		$this->getSoportados();
+	}
 	
 	public function getLang()
 	{
-	 return $this->lang;	
+		return $this->lang;	
 	}	
+
+
+
+	public function setLang()
+	{	
+		if(!isset($_SESSION['lang']) && !isset($_GET['lang'])){
+			
+			$this->setIdiomaEntrada();
+			$lang = $this->buscalang();
+			$_SESSION['lang'] = $lang;
+			return $this->lang = $lang;
+				
+			} elseif(isset($_SESSION['lang']) && !isset($_GET['lang'])) {
+			
+				return $this->lang = $_SESSION['lang'];
+			
+			} elseif(isset($_GET['lang'])) {
+			
+				$lang = $this->checklang($_GET['lang']);
+				$_SESSION['lang'] = $lang;
+				return $this->lang = $lang;
+			}
+			
+	}
 	
-	public function setLang($lang = 'es')
+
+	
+	
+	public function setIdiomaEntrada()
 	{
-	return $this->lang = $lang ;	
+		// Recogemos el Lang del usuario.
+		$idioma = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+		$idioma = explode('-',$idioma[0]);
+		return $this->IdiomaEntrada = $idioma[0];
+	}
+
+
+	
+	public function buscalang()
+	{
+		// comprobamos si tiene lang, y si la tiene que esta este dentro de idiomas soportados
+		if(!isset($this->IdiomaEntrada)){
+			
+			return $this->soportados[0];
+			
+			} else {
+				
+				// Comprobamos que exista el valor
+				return $this->checklang($this->IdiomaEntrada);
+			
+			}
+			
+	}
+	
+	
+	public function checklang($evalua)
+	{
+		if(in_array($evalua,$this->soportados)){	
+					$key = array_search($evalua, $this->soportados);
+					return 	$this->soportados[$key];
+					} else {
+					return $this->soportados[0];		
+				}	
+		
 	}
 	
 	
@@ -38,7 +106,7 @@ class myLocale
 	}	
 	
 	
-	public function setSoportados($soportados = array('es','en'))
+	public function setSoportados($soportados = array('es','en','ca'))
 	{
 		$this->soportados = $soportados;
 		return $this;

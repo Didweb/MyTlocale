@@ -1,13 +1,31 @@
 {
 	"name": "didweb/MyTLocal",
 	"description": "MyT Framework - Sistema internalizacion",
+	"keywords": ["resize", "redimensionar imagen", "thumbnail"],
+	"homepage": "https://github.com/Didweb",
+	"time": "2014-6-26",
+	"type": "MyT-framework",
 	"license": "GPLv3",
 	"authors": [
 		{
 			"name": "Eduard Pinuaga",
-			"email": "info@did-web.com"
+			"email": "info@did-web.com",
+			"homepage": "http://www.did-web.com",
+			"role": "Developer"
 		}
 	],
+	"repositories":[
+	
+			{
+            "type": "vcs",
+            "url": "git@github.com:Didweb/MyTlocale.git"
+        }
+	],
+	"support": {
+		"email": "info@did-web.com",
+		"source": "https://github.com/Didweb/MyTlocale",
+		"issues": "https://github.com/Didweb/MyTlocale/issues"
+    },
 	"require": {
 		"phpunit/phpunit": "4.1.*"
 	}
