@@ -1,7 +1,7 @@
 MyTlocale
 =========
 
-Sistema Locale para mi framework MyT
+Sistema Locale, inicialmente lo he creado para mi framework MyT, pero se puede reutilizar para cualquier otra aplicación.
 
 ## Qué es
 
