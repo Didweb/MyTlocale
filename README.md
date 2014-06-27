@@ -75,5 +75,5 @@ $getLa = $_GET['lang'];
 ### Procedimiento
 
 El proceso es el siguiente:
-La clase comprueba  si no existe una variable de sesión, en el caso de no existir inicia la comprobación del idioma del usuario según `$_SERVER['HTTP_ACCEPT_LANGUAGE']` , dependiendo de lo que encuentre el retornara el idioma según los criterios mencionados anteriormente.
+La clase comprueba  si no existe una variable de sesión, en el caso de no existir inicia la comprobación del idioma del usuario según `$_SERVER['HTTP_ACCEPT_LANGUAGE']` , dependiendo de lo que encuentre retornara el idioma siguiendo los criterios mencionados anteriormente.
 
