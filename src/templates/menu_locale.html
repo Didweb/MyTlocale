@@ -1,0 +1,26 @@
+<aside id='locale'>
+	
+	{% if estilo=='iso'  %}	
+		
+		{% for idioma in idiomas %}
+			{% if idiomasel==idioma %}
+				<a href='#lang={{ idioma }}' class='localesel'>{{ idioma }}</a>
+			{% else %}
+				<a href='#lang={{ idioma }}'>{{ idioma }}</a>
+			{% endif %}
+		{% endfor %}
+
+	{% elseif estilo=='img' %}
+
+		{% for idioma in idiomas %}
+			{% if idiomasel==idioma %}
+				<a href='#lang={{ idioma }}' class='localesel'></a>
+			{% else %}
+				<a href='#lang={{ idioma }}'></a>
+			{% endif %}
+		{% endfor %}
+
+
+	{% endif %}
+
+</aside>

@@ -21,6 +21,7 @@ class myLocale
 	public 	$lang;
 	private $soportados;
 	public 	$IdiomaEntrada;
+	public $estilo;
 	
 
 	public function __construct($soportados = array('es','en','ca'))
@@ -61,8 +62,19 @@ class myLocale
 			
 	}
 	
-
 	
+	public function setEstilo($estilo)
+	{
+		$this->estilo = $estilo;
+		return $this;
+		
+	}
+
+	public function getEstilo($estilo)
+	{
+		return $this->estilo;
+		
+	}	
 	
 	public function setIdiomaEntrada()
 	{
